@@ -710,8 +710,8 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Format C and C++ files using clang-format with the Linux kernel style
-        c = { 'clang_format_kernel_style' },
-        cpp = { 'clang_format_kernel_style' },
+        c = { 'clang_format' },
+        cpp = { 'clang_format' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -719,7 +719,7 @@ require('lazy').setup({
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
       formatters = {
-        clang_format_kernel_style = {
+        clang_format = {
           command = 'clang-format',
           args = { '--style=file' }, -- Make clang-format use the .clang-format file specified in the project directory or any parent directory, including ~/
           -- args = { '--style', 'file', '--assume-filename', vim.fn.expand '~/.config/nvim/.clang-format' }, -- Use the .clang-format file inside this repository
