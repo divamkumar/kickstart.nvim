@@ -710,7 +710,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- Format C and C++ files using clang-format with the Linux kernel style
+        -- Format C and C++ files using clang-format
         c = { 'clang_format' },
         cpp = { 'clang_format' },
         -- Conform can also run multiple formatters sequentially
